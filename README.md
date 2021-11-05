@@ -29,6 +29,7 @@ Here is exactly what I entered to generate my 3 json files:
 ```
 
 **Link**
+
 Here is the link to the [course project](https://github.com/mikeizbicki/cmc-csci040/tree/2021fall/hw_03)
 
 _Thank You_
