@@ -13,3 +13,6 @@ To run this file open `ebay-dl.py`. In the terminal enter the information below:
 ```
 
 To search for a specific item on Ebay enter whatever you would like to seach for in the area 'search term'. Change the term as many times as you would like to generate a new json file.
+
+**Link**
+Here is the link to the [course project](https://github.com/mikeizbicki/cmc-csci040/tree/2021fall/hw_03)
