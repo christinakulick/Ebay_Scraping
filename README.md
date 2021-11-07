@@ -28,7 +28,7 @@ Here is exactly what I entered to generate my 3 json files:
 /usr/local/bin/python3 /Users/christinakulick/Documents/GitHub/HW_03/ebay-dl.py 'water bottle'
 ```
 
-Running this code will also create a csv file of the same information that the json file will contain.
+Running this same code from above will also create a csv file of the same information that the json file will contain.
 
 **Link**
 
