@@ -3,6 +3,7 @@ from typing import Text
 import requests
 from bs4 import BeautifulSoup
 import json
+import csv
 
 def parse_itemssold(text):
     '''
@@ -29,15 +30,15 @@ def parse_price(text):
     '''
  
     numbers =''
+    if '$' not in text:
+        return 0
+    elif 'to' in text:
+        ans = text.split()
+        text = ans[0]
     for char in text:
         if char in '1234567890':
             numbers += char
-    if '$' in text:
-        return '$' + str(int(numbers)/100)
-    elif 'to' in text:
-        price_str = str(int(numbers)/100)
-        i = price_str.index(" ")
-        return '$' + price_str[:i]
+    return '$' + str(int(numbers)/100)
         
 def parse_shipping(text):
         
@@ -135,7 +136,14 @@ if __name__ == '__main__':
             print('len(items)=', len(items))
 
             # write the json to a file
-            filename = args.search_term+'.json'
+            filename = args.search_term +'.json'
             with open(filename, 'w', encoding='ascii') as f:
                 f.write(json.dumps(items))
+
+            #write to a csv file
+            filename = args.search_term + '.csv'
+            with open(filename,'w', encoding='UTF8') as f:
+                writer = csv.writer(f)
+                writer.writerow(items)
+
 
